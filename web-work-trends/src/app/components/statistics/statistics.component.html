@@ -1,0 +1,16 @@
+<div class="statistics-wrapper">
+    <p *ngIf="loadingProjects">Loading projects...</p>
+
+    <p *ngIf="noProjectFound">No project found.</p>
+
+    <div class="chart-wrapper" *ngIf="projectsFound">
+        <canvas baseChart 
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+        </canvas>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+  
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input [disabled]="submittingRequest"  (keyup)="onFirstnameKey($event)" value="{{firstname}}" matInput placeholder="Firstname">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input [disabled]="submittingRequest"  (keyup)="onLastnameKey($event)" value="{{lastname}}" matInput placeholder="Lastname">
+          </mat-form-field>
+          
+          <mat-form-field class="example-full-width">
+            <input [disabled]="submittingRequest"  (keyup)="onUsernameKey($event)" value="{{username}}" matInput placeholder="Username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input [disabled]="submittingRequest"  (keyup)="onEmailKey($event)" value="{{email}}" matInput placeholder="Email">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input type="password" [disabled]="submittingRequest"  (keyup)="onPasswordKey($event)" value="{{password}}" matInput placeholder="Password">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input type="password" [disabled]="submittingRequest"  (keyup)="onConfirmPasswordKey($event)" value="{{confirm_password}}" matInput placeholder="Confirm Password">
+          </mat-form-field>
+        </mat-card-content>
+  
+        <button (click)="onSubmit()" mat-stroked-button class="btn-block">{{ registerBtnText }}</button>
+  
+      </form>
+
+      <p *ngIf="!submittingRequest" class="new-account" >Existing user? <b><a routerLink="/login">Login</a></b></p>
+    </mat-card>
+</div>

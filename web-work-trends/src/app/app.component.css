@@ -1,0 +1,8 @@
+.loading-wrapper{height:100vh;background-color: bisque;display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.profile {display: flex; flex-direction: row; justify-content: center; align-items: right;
+padding-right: 15px;
+}
+.profile-name {margin-top: 11px;}
+.profile-image {object-fit: cover; width: 40px;height: 40px; border-radius: 50%; background-color: #ccc;margin-right: 10px;}
+.profile-logout {color: white; text-decoration: none;cursor: pointer;margin-top: 7px;}
+.statistics-btn {color: white !important; margin-left: 50px;}
